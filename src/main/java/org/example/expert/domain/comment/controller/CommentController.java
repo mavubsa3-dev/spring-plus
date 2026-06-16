@@ -9,6 +9,7 @@ import org.example.expert.domain.comment.service.CommentService;
 import org.example.expert.domain.common.annotation.Auth;
 import org.example.expert.domain.common.dto.AuthUser;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
 public class CommentController {
 
     private final CommentService commentService;
+
 
     @PostMapping("/todos/{todoId}/comments")
     public ResponseEntity<CommentSaveResponse> saveComment(
