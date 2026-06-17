@@ -3,18 +3,16 @@ package org.example.expert.domain.todo.repository;
 import static org.example.expert.domain.todo.entity.QTodo.*;
 import static org.example.expert.domain.user.entity.QUser.*;
 
-import java.nio.file.OpenOption;
 import java.util.Optional;
 
 import org.example.expert.domain.todo.entity.Todo;
 
-import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class TodoCustomRepositorylmpl implements TodoCustomRepository{
+public class TodoCustomRepositoryImpl implements TodoCustomRepository{
 
 	private final JPAQueryFactory jpaQueryFactory;
 
