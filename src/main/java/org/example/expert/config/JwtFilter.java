@@ -37,7 +37,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         String url = request.getRequestURI();
 
-        if (url.startsWith("/auth")) {
+        if (url.startsWith("/auth") || url.startsWith("/ws") || url.startsWith("/api/chat") ) {
             chain.doFilter(request, response);
             return;
         }
